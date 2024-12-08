@@ -1,4 +1,4 @@
-services:
+echo "services:
   - type: web
     name: esaal-backend
     env: node
@@ -6,5 +6,4 @@ services:
     startCommand: npm start
     envVars:
       - key: NODE_ENV
-        value: production
-        
+        value: production" > render.yaml
