@@ -1,7 +1,11 @@
+console.log('Starting server...'); 
 const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
-
+const express = require('express');
+console.log('Express loaded'); 
+const app = express();
+const port = process.env.PORT || 3000;
 // Middleware
 app.use(express.json());
 
