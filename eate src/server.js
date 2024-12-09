@@ -12,7 +12,6 @@ app.get('/', (req, res) => {
   res.json({ message: 'Esaal Backend API' });
 });
 
-// Update the listen call to use 0.0.0.0
 app.listen(port, '0.0.0.0', () => {
-  console.log(`Server is listening on port ${port}`);
+  console.log(`Server running at http://0.0.0.0:${port}`);
 });
