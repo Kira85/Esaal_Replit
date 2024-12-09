@@ -1,1 +1,1 @@
-echo 'console.log("Hello, Replit!");' > index.js
+console.log("Server is running!");
