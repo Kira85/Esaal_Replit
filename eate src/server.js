@@ -1,31 +1,16 @@
-console.log('Starting server...'); 
 const express = require('express');
+const cors = require('cors');
+
 const app = express();
-const port = process.env.PORT || 3000;
-const express = require('express');
-console.log('Express loaded'); 
-const app = express();
-const port = process.env.PORT || 3000;
-// Middleware
+const port = process.env.PORT || 8080;
+
+app.use(cors());
 app.use(express.json());
 
-// Test route
 app.get('/', (req, res) => {
-  console.log('Received request on root endpoint');
-  res.json({ message: 'Welcome to Esaal Backend API' });
+  res.json({ message: 'Esaal Backend is Running!' });
 });
 
-// Error handling middleware
-app.use((err, req, res, next) => {
-  console.error('Error:', err);
-  res.status(500).json({ error: 'Internal Server Error' });
-});
-
-// Start server with more explicit logging
-app.listen(port, () => {
-  console.log('=================================');
-  console.log(`Server is running on port ${port}`);
-  console.log('=================================');
-}).on('error', (err) => {
-  console.error('Failed to start server:', err);
+app.listen(port, '0.0.0.0', () => {
+  console.log(`Server running on port ${port}`);
 });
