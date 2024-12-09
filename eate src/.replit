@@ -1,0 +1,10 @@
+run = "node src/server.js"
+[env]
+PORT = "4000"
+
+[nix]
+channel = "stable-22_11"
+
+[deployment]
+run = ["sh", "-c", "node src/server.js"]
+deploymentTarget = "cloudrun"
