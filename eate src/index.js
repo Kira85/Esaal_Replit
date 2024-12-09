@@ -1,1 +1,1 @@
-console.log("Hello, Replit!");
+echo 'console.log("Hello, Replit!");' > index.js
